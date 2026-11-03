@@ -1,0 +1,345 @@
+<mxfile host="app.diagrams.net" agent="recipe-book">
+  <diagram id="Классы" name="Классы">
+    <mxGraphModel dx="1867" dy="1041" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="RecipeRepository" vertex="1">
+          <mxGeometry height="188" width="330" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="- db: DatabaseSync" vertex="1">
+          <mxGeometry height="22" width="330" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="c2" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="330" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ listIngredients(): Ingredient[]" vertex="1">
+          <mxGeometry height="22" width="330" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ addIngredient(input): Ingredient" vertex="1">
+          <mxGeometry height="22" width="330" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ getAll(): Recipe[]" vertex="1">
+          <mxGeometry height="22" width="330" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ getById(id: number): Recipe" vertex="1">
+          <mxGeometry height="22" width="330" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ create(input: NewRecipeInput): Recipe" vertex="1">
+          <mxGeometry height="22" width="330" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" parent="c2" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ delete(id: number): boolean" vertex="1">
+          <mxGeometry height="22" width="330" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="«service»&lt;br&gt;RecipeService" vertex="1">
+          <mxGeometry height="202" width="380" x="430" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" parent="c11" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="380" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ search(recipes, filters): RecipeView[]" vertex="1">
+          <mxGeometry height="22" width="380" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ matches(r: Recipe, f: SearchFilters): boolean" vertex="1">
+          <mxGeometry height="22" width="380" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ totalMinutes(r: Recipe): number" vertex="1">
+          <mxGeometry height="22" width="380" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ difficulty(r: Recipe): Difficulty" vertex="1">
+          <mxGeometry height="22" width="380" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ methods(r: Recipe): Operation[]" vertex="1">
+          <mxGeometry height="22" width="380" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ validateRecipe(body, ids): NewRecipeInput" vertex="1">
+          <mxGeometry height="22" width="380" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" parent="c11" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ validateIngredient(body, list): NewIngredientInput" vertex="1">
+          <mxGeometry height="22" width="380" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="SearchFilters" vertex="1">
+          <mxGeometry height="180" width="290" x="880" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ query?: string" vertex="1">
+          <mxGeometry height="22" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ dish?: DishCategory" vertex="1">
+          <mxGeometry height="22" width="290" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ ingredientCategories?: IngredientCategory[]" vertex="1">
+          <mxGeometry height="22" width="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ minMinutes?: number" vertex="1">
+          <mxGeometry height="22" width="290" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ maxMinutes?: number" vertex="1">
+          <mxGeometry height="22" width="290" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ operation?: Operation" vertex="1">
+          <mxGeometry height="22" width="290" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" parent="c20" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ difficulties?: Difficulty[]" vertex="1">
+          <mxGeometry height="22" width="290" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="«enumeration»&lt;br&gt;DishCategory" vertex="1">
+          <mxGeometry height="172" width="170" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" parent="c28" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Супы" vertex="1">
+          <mxGeometry height="22" width="170" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" parent="c28" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Горячее" vertex="1">
+          <mxGeometry height="22" width="170" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" parent="c28" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Салаты" vertex="1">
+          <mxGeometry height="22" width="170" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" parent="c28" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Завтраки" vertex="1">
+          <mxGeometry height="22" width="170" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="c33" parent="c28" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Десерты" vertex="1">
+          <mxGeometry height="22" width="170" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="c34" parent="c28" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Закуски" vertex="1">
+          <mxGeometry height="22" width="170" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c35" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="Recipe" vertex="1">
+          <mxGeometry height="180" width="260" x="430" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ id: number" vertex="1">
+          <mxGeometry height="22" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ name: string" vertex="1">
+          <mxGeometry height="22" width="260" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ dish: DishCategory" vertex="1">
+          <mxGeometry height="22" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c39" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ isUser: boolean" vertex="1">
+          <mxGeometry height="22" width="260" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c40" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ createdAt: string" vertex="1">
+          <mxGeometry height="22" width="260" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ ingredients: RecipeIngredient[]" vertex="1">
+          <mxGeometry height="22" width="260" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" parent="c35" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ steps: Step[]" vertex="1">
+          <mxGeometry height="22" width="260" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="RecipeView" vertex="1">
+          <mxGeometry height="92" width="290" x="880" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" parent="c43" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ totalMinutes: number" vertex="1">
+          <mxGeometry height="22" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c45" parent="c43" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ difficulty: Difficulty" vertex="1">
+          <mxGeometry height="22" width="290" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c46" parent="c43" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ methods: Operation[]" vertex="1">
+          <mxGeometry height="22" width="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c47" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="«enumeration»&lt;br&gt;Difficulty" vertex="1">
+          <mxGeometry height="106" width="140" x="1230" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="c48" parent="c47" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="easy" vertex="1">
+          <mxGeometry height="22" width="140" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c49" parent="c47" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="mid" vertex="1">
+          <mxGeometry height="22" width="140" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c50" parent="c47" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="hard" vertex="1">
+          <mxGeometry height="22" width="140" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="c51" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="Step" vertex="1">
+          <mxGeometry height="136" width="260" x="40" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="c52" parent="c51" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ position: number" vertex="1">
+          <mxGeometry height="22" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c53" parent="c51" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ operation: Operation" vertex="1">
+          <mxGeometry height="22" width="260" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c54" parent="c51" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ minutes: number" vertex="1">
+          <mxGeometry height="22" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c55" parent="c51" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ note: string" vertex="1">
+          <mxGeometry height="22" width="260" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="c56" parent="c51" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ ingredientIds: number[]" vertex="1">
+          <mxGeometry height="22" width="260" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c57" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="RecipeIngredient" vertex="1">
+          <mxGeometry height="70" width="260" x="430" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="c58" parent="c57" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ ingredientId: number" vertex="1">
+          <mxGeometry height="22" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c59" parent="c57" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ quantity: string" vertex="1">
+          <mxGeometry height="22" width="260" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c60" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="Ingredient" vertex="1">
+          <mxGeometry height="92" width="290" x="880" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="c61" parent="c60" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ id: number" vertex="1">
+          <mxGeometry height="22" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c62" parent="c60" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ name: string" vertex="1">
+          <mxGeometry height="22" width="290" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="c63" parent="c60" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="+ category: IngredientCategory" vertex="1">
+          <mxGeometry height="22" width="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c64" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="«enumeration»&lt;br&gt;Operation" vertex="1">
+          <mxGeometry height="106" width="260" x="40" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="c65" parent="c64" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Нарезка, Жарка, Варка," vertex="1">
+          <mxGeometry height="22" width="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c66" parent="c64" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Тушение, Запекание, Смешивание," vertex="1">
+          <mxGeometry height="22" width="260" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c67" parent="c64" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="Взбивание, Маринование, Настаивание" vertex="1">
+          <mxGeometry height="22" width="260" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="c68" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fontSize=13;fontFamily=Helvetica;" value="«enumeration»&lt;br&gt;IngredientCategory" vertex="1">
+          <mxGeometry height="84" width="290" x="880" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="c69" parent="c68" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="meat, fish, veg, spice," vertex="1">
+          <mxGeometry height="22" width="290" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c70" parent="c68" style="text;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontSize=12;fontFamily=Helvetica;" value="herb, dairy, grain, other" vertex="1">
+          <mxGeometry height="22" width="290" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="c71" edge="1" parent="1" source="c35" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=diamondThin;startFill=1;startSize=16;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c57" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c72" connectable="0" parent="c71" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c73" connectable="0" parent="c71" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c74" edge="1" parent="1" source="c35" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=diamondThin;startFill=1;startSize=16;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" target="c51" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="660" />
+              <mxPoint x="170" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c75" connectable="0" parent="c74" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c76" connectable="0" parent="c74" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c77" edge="1" parent="1" source="c57" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" target="c60" value="ссылается на">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c78" connectable="0" parent="c77" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c79" connectable="0" parent="c77" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c80" edge="1" parent="1" source="c51" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;exitX=0.75;exitY=1;entryX=0.25;entryY=1;" target="c60" value="использует">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="870" />
+              <mxPoint x="952" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c81" connectable="0" parent="c80" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c82" connectable="0" parent="c80" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c83" edge="1" parent="1" source="c51" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;exitX=0.25;exitY=1;entryX=0.25;entryY=0;" target="c64" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c84" connectable="0" parent="c83" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c85" connectable="0" parent="c83" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c86" edge="1" parent="1" source="c60" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;exitX=0.75;exitY=1;entryX=0.75;entryY=0;" target="c68" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c87" connectable="0" parent="c86" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c88" connectable="0" parent="c86" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c89" edge="1" parent="1" source="c35" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;exitX=0;exitY=0.25;entryX=1;entryY=0.25;" target="c28" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c90" connectable="0" parent="c89" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;fontSize=11;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c91" connectable="0" parent="c89" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;fontSize=11;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-6" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c92" edge="1" parent="1" source="c43" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=block;endSize=14;endFill=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="c35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c93" edge="1" parent="1" source="c43" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="c47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c94" edge="1" parent="1" source="c2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;dashed=1;exitX=0.9;exitY=1;entryX=0;entryY=0.75;" target="c35" value="хранит">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="337" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c95" edge="1" parent="1" source="c11" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;dashed=1;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="c20" value="использует">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c96" edge="1" parent="1" source="c11" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;dashed=1;exitX=0.75;exitY=1;entryX=0.25;entryY=0;" target="c43" value="создаёт">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="370" />
+              <mxPoint x="952" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c97" edge="1" parent="1" source="c11" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=11;labelBackgroundColor=#FFFFFF;endArrow=open;endSize=10;dashed=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" target="c35" value="анализирует">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

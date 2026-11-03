@@ -1,0 +1,21 @@
+{
+  "name": "recipe-book",
+  "version": "1.0.0",
+  "description": "Книга рецептов: составление рецептов из ингредиентов и операций, поиск по ингредиентам, категориям, времени и способу готовки",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types --experimental-sqlite --disable-warning=ExperimentalWarning src/server.ts",
+    "test": "node --experimental-strip-types --experimental-sqlite --disable-warning=ExperimentalWarning --test src/service.test.ts src/repository.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start:dist": "node --experimental-sqlite --disable-warning=ExperimentalWarning dist/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.8.3"
+  },
+  "license": "MIT"
+}
